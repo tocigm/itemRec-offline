@@ -25,6 +25,8 @@
 		592FF92518EE240200C164F8 /* CameraExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FF92218EE240200C164F8 /* CameraExampleAppDelegate.m */; };
 		592FF92618EE240200C164F8 /* CameraExampleViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 592FF92418EE240200C164F8 /* CameraExampleViewController.mm */; };
 		5993C7721D5D4E980048CE6A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5993C7711D5D4E980048CE6A /* Accelerate.framework */; };
+		E3DD00B61D80594A0053F5F2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DD00B41D80594A0053F5F2 /* Fabric.framework */; };
+		E3DD00B71D80594A0053F5F2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DD00B51D80594A0053F5F2 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		592FF92318EE240200C164F8 /* CameraExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraExampleViewController.h; sourceTree = SOURCE_ROOT; };
 		592FF92418EE240200C164F8 /* CameraExampleViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraExampleViewController.mm; sourceTree = SOURCE_ROOT; };
 		5993C7711D5D4E980048CE6A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		E3DD00B41D80594A0053F5F2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E3DD00B51D80594A0053F5F2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5993C7721D5D4E980048CE6A /* Accelerate.framework in Frameworks */,
+				E3DD00B61D80594A0053F5F2 /* Fabric.framework in Frameworks */,
 				591D3EDF1CFFAD230059011C /* libprotobuf-lite.a in Frameworks */,
 				591D3EE01CFFAD230059011C /* libprotobuf.a in Frameworks */,
 				591D3ECF1CFF7FCE0059011C /* ImageIO.framework in Frameworks */,
@@ -70,6 +75,7 @@
 				591D3EC51CFF7F130059011C /* AVFoundation.framework in Frameworks */,
 				592FF8BB18ECBD7600C164F8 /* CoreGraphics.framework in Frameworks */,
 				592FF8B918ECBD7600C164F8 /* Foundation.framework in Frameworks */,
+				E3DD00B71D80594A0053F5F2 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,8 @@
 				592FF8BE18ECBD7600C164F8 /* CameraExample */,
 				592FF8B718ECBD7600C164F8 /* Frameworks */,
 				592FF8B618ECBD7600C164F8 /* Products */,
+				E3DD00B41D80594A0053F5F2 /* Fabric.framework */,
+				E3DD00B51D80594A0053F5F2 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +167,7 @@
 				592FF8B118ECBD7600C164F8 /* Sources */,
 				592FF8B218ECBD7600C164F8 /* Frameworks */,
 				592FF8B318ECBD7600C164F8 /* Resources */,
+				E3DD00B31D8059350053F5F2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,6 +221,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E3DD00B31D8059350053F5F2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run e0e2f6fc63b5081af9d776eac04e5de4bdddf1cb 864d0e6e50505c4a44496bb2b4309716f7f81e4b96d92f20a488deff4704f0b4";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		592FF8B118ECBD7600C164F8 /* Sources */ = {
@@ -278,7 +303,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -351,7 +379,10 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";

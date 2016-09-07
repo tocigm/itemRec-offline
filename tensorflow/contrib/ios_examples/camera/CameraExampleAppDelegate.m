@@ -14,12 +14,17 @@
 
 #import "CameraExampleAppDelegate.h"
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @implementation CameraExampleAppDelegate
 
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Fabric with:@[[Crashlytics class]]];
   [self.window makeKeyAndVisible];
   return YES;
 }
