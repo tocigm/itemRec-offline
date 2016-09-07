@@ -180,7 +180,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext =
 
   } else {
     [session startRunning];
-    [sender setTitle:@"Freeze Frame" forState:UIControlStateNormal];
+    [sender setTitle:@"Capture the photo" forState:UIControlStateNormal];
   }
 }
 

@@ -138,7 +138,7 @@
 				TargetAttributes = {
 					5911579A1CF4011C00C31E3A = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 85Z3VXS37U;
+						DevelopmentTeam = 2XW6734S97;
 					};
 				};
 			};
@@ -275,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../..",
@@ -302,6 +303,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.TF-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -309,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../..",
@@ -337,6 +340,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.TF-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

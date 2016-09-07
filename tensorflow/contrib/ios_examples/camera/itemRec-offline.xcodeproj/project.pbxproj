@@ -176,8 +176,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					592FF8B418ECBD7600C164F8 = {
+						DevelopmentTeam = H6B79874W9;
+					};
+				};
 			};
-			buildConfigurationList = 592FF8AE18ECBD3600C164F8 /* Build configuration list for PBXProject "camera_example" */;
+			buildConfigurationList = 592FF8AE18ECBD3600C164F8 /* Build configuration list for PBXProject "itemRec-offline" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,6 +244,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -246,6 +252,7 @@
 		592FF8B018ECBD3600C164F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 			};
 			name = Release;
 		};
@@ -267,6 +274,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
@@ -311,7 +319,7 @@
 					"-Xlinker",
 					"-dead_strip",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.CameraExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bagiks.itemRec-offline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,6 +346,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -376,7 +385,7 @@
 					"-Xlinker",
 					"-dead_strip",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.CameraExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bagiks.itemRec-offline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,7 +398,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		592FF8AE18ECBD3600C164F8 /* Build configuration list for PBXProject "camera_example" */ = {
+		592FF8AE18ECBD3600C164F8 /* Build configuration list for PBXProject "itemRec-offline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				592FF8AF18ECBD3600C164F8 /* Debug */,
